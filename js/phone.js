@@ -98,11 +98,13 @@ const displaPhoneDetails = phone => {
   const modalTitel = document.getElementById('phoneDetailModalLabel')
  modalTitel.innerText = phone.name;
  const modalBody = document.getElementById('modal-body')
+ console.log(phone.mainFeatures.sensors[0]);
  modalBody.innerHTML = `
- <img src="${phone.image}" alt="">
- <p>Release Date: ${phone.releaseDate ? phone.releaseDate : 'no Release Date Founction' }</p>
- <p>Other: ${phone.others ? phone.others.Bluetooth : 'no Bluetooth informatiion'}</p>
- <p>Main Features: ${phone.mainFeatures ? phone.mainFeatures.chipSet : 'no chipSet information'}
+     <img src="${phone.image}" alt="">
+     <p>Release Date: ${phone.releaseDate ? phone.releaseDate : 'no Release Date Founction' }</p>
+     <p>Other: ${phone.others ? phone.others.Bluetooth : 'no Bluetooth informatiion'}</p>
+     <p>Main Features: ${phone.mainFeatures ? phone.mainFeatures.chipSet : 'no chipSet information'}
+     <p>sensore: ${phone.mainFeatures.sensors[0] ? phone.mainFeatures.sensors[0] : 'no sensor'}</p>
  `;
 }
 
